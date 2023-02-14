@@ -1,5 +1,6 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { Ablak } from './ablak.entity';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -10,10 +11,8 @@ import { AppService } from './app.service';
       host: 'localhost',
       username: 'root',
       password: '',
-      database: 'database',
-      entities: [
-        /* List of entities here */
-      ],
+      database: 'nyilaszarok',
+      entities: [Ablak],
       synchronize: true,
     }),
   ],
